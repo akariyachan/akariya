@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>炭火焼き鳥とおでん 灯り屋（デモ）</title>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--wood1:#5a3a22;--wood2:#6e4a2c;--ink:#2a1a10;--paper:#f6ecd9;--lamp:#f2a541;--ai:#1f2f4a}
+*{box-sizing:border-box}body{margin:0;font-family:"Noto Serif JP",serif;color:var(--paper);line-height:1.9;
+background:repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 2px,transparent 2px 7px),repeating-linear-gradient(88deg,var(--wood1) 0 30px,var(--wood2) 30px 55px,#4c311c 55px 80px)}
+h1,h2,h3{font-family:"Shippori Mincho",serif;letter-spacing:.15em}
+nav{position:sticky;top:0;z-index:9;background:rgba(30,18,10,.9);display:flex;justify-content:center;flex-wrap:wrap;gap:1.2em;padding:.6em}
+nav a{color:var(--paper);text-decoration:none}nav a:hover{color:var(--lamp)}
+.hero{min-height:90vh;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;
+background:radial-gradient(ellipse at 50% 30%,rgba(242,165,65,.45),transparent 60%),linear-gradient(#2a1a10,#3b2616)}
+.noren{display:flex;gap:6px;width:min(720px,92vw);position:absolute;top:0}
+.noren div{flex:1;height:46vh;background:var(--ai);border-radius:0 0 4px 4px;box-shadow:inset 0 -10px 20px rgba(0,0,0,.3);animation:sway 5s ease-in-out infinite;transform-origin:top}
+.noren div:nth-child(2n){animation-delay:.6s}
+@keyframes sway{50%{transform:skewX(1.5deg)}}
+.noren-text{position:absolute;top:12vh;font-size:clamp(2.5rem,8vw,5rem);font-family:"Shippori Mincho";color:#fff;letter-spacing:.4em;writing-mode:horizontal-tb}
+.hero p{margin-top:48vh;font-size:1.2rem;text-shadow:0 0 12px var(--lamp)}
+.chochin{position:absolute;right:8%;top:50vh;width:60px;height:80px;border-radius:45%;background:radial-gradient(#ffcf70,#d1471f);box-shadow:0 0 40px var(--lamp);color:#3a0d00;writing-mode:vertical-rl;display:flex;align-items:center;justify-content:center;font-weight:700}
+section{max-width:960px;margin:3em auto;padding:2em;background:rgba(30,18,10,.78);border:1px solid rgba(242,165,65,.3);border-radius:6px}
+h2{text-align:center;color:var(--lamp);border-bottom:1px solid rgba(242,165,65,.4);padding-bottom:.4em}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5em}
+.menu ul{list-style:none;padding:0}.menu li{display:flex;justify-content:space-between;border-bottom:1px dotted #8a6a4a;padding:.3em 0}
+.sample{font-size:.8rem;color:#e0b080}
+form{display:grid;gap:1em}label{display:grid;gap:.3em}
+input,select,textarea{font:inherit;padding:.6em;border-radius:4px;border:1px solid #8a6a4a;background:var(--paper);color:var(--ink)}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1em}
+button{font:inherit;padding:.8em;background:#b5361d;color:#fff;border:0;border-radius:4px;cursor:pointer;letter-spacing:.2em}
+.err{color:#ff9a7a;font-size:.85rem;min-height:1em}#done{display:none;background:#2f4a2a;padding:1em;border-radius:4px}
+footer{text-align:center;padding:2em;font-size:.85rem;background:rgba(20,12,6,.9)}
+@media(max-width:600px){.chochin{display:none}section{margin:1.5em .6em;padding:1.2em}}
+</style></head><body>
+<nav><a href="#concept">こだわり</a><a href="#menu">お品書き</a><a href="#info">店舗情報</a><a href="#reserve">ご予約</a></nav>
+<header class="hero"><div class="noren"><div></div><div></div><div></div><div></div><div></div></div>
+<div class="noren-text">灯り屋</div><div class="chochin">やきとり</div>
+<p>炭火焼き鳥と、じっくり煮込んだおでんの店</p></header>
+<section id="concept"><h2>こだわり</h2><p>備長炭で一本ずつ丁寧に焼き上げる焼き鳥と、昆布と鰹の出汁で一日かけて煮含めたおでん。木のぬくもりと灯りに包まれた店内で、肩の力を抜いてお過ごしください。</p><p class="sample">※本サイトは架空の店舗によるデモサイトです。</p></section>
+<section id="menu"><h2>お品書き</h2><p class="sample" style="text-align:center">※価格はすべて架空のサンプルです（税込）</p><div class="menu">
+<div><h3>焼き鳥</h3><ul><li>ねぎま<span>¥220</span></li><li>もも（塩・たれ）<span>¥200</span></li><li>つくね 卵黄添え<span>¥280</span></li><li>皮<span>¥180</span></li><li>ぼんじり<span>¥200</span></li><li>ささみ梅しそ<span>¥240</span></li><li>おまかせ五本盛り<span>¥1,000</span></li></ul></div>
+<div><h3>おでん</h3><ul><li>大根<span>¥180</span></li><li>玉子<span>¥150</span></li><li>牛すじ<span>¥300</span></li><li>ちくわぶ<span>¥150</span></li><li>はんぺん<span>¥160</span></li><li>厚揚げ<span>¥180</span></li><li>おでん盛り合わせ<span>¥900</span></li></ul></div>
+<div><h3>飲み物</h3><ul><li>生ビール<span>¥600</span></li><li>ハイボール<span>¥500</span></li><li>日本酒（一合）<span>¥700〜</span></li><li>焼酎（芋・麦）<span>¥550</span></li><li>梅酒<span>¥550</span></li><li>烏龍茶<span>¥350</span></li></ul></div></div></section>
+<section id="info"><h2>店舗情報 <span class="sample">（サンプル）</span></h2><p>店名：炭火焼き鳥とおでん 灯り屋<br>住所：東京都架空区灯町1-2-3（架空の住所です）<br>電話：00-0000-0000（架空）<br>営業時間：17:00〜23:30（L.O. 23:00）<br>定休日：日曜・祝日<br>席数：カウンター8席・座敷16席</p></section>
+<section id="reserve"><h2>ご予約</h2><p class="sample">※デモ用フォームです。送信内容はどこにも送られません。</p>
+<form id="f" novalidate><label>お名前<input name="name" required><span class="err"></span></label>
+<div class="row"><label>電話番号<input name="tel" type="tel" required pattern="[0-9\-]{10,13}"><span class="err"></span></label><label>メールアドレス<input name="email" type="email" required><span class="err"></span></label></div>
+<div class="row"><label>日付<input name="date" type="date" required><span class="err"></span></label><label>時間<select name="time" required><option value="">選択してください</option><option>17:00</option><option>18:00</option><option>19:00</option><option>20:00</option><option>21:00</option></select><span class="err"></span></label><label>人数<select name="people" required><option value="">選択</option><option>1名</option><option>2名</option><option>3名</option><option>4名</option><option>5名</option><option>6名</option><option>7名以上</option></select><span class="err"></span></label></div>
+<label>ご要望<textarea name="notes" rows="3"></textarea></label><button>予約内容を送信</button></form><div id="done"></div></section>
+<footer>© 灯り屋（架空の店舗・デモサイト）</footer>
+<script>
+const f=document.getElementById('f'),d=f.date;d.min=new Date().toISOString().slice(0,10);
+const msg={name:'お名前を入力してください',tel:'電話番号を半角数字（10〜13桁）で入力してください',email:'正しいメールアドレスを入力してください',date:'本日以降の日付を選択してください',time:'時間を選択してください',people:'人数を選択してください'};
+f.addEventListener('submit',e=>{e.preventDefault();let ok=true;
+for(const k in msg){const el=f[k],er=el.parentElement.querySelector('.err');const bad=!el.checkValidity();er.textContent=bad?msg[k]:'';if(bad)ok=false}
+if(!ok)return;const o=document.getElementById('done');
+o.textContent=`${f.name.value}様、${f.date.value} ${f.time.value}・${f.people.value}でのご予約を受け付けました（デモのため実際の予約は行われていません）。`;
+o.style.display='block';f.style.display='none';});
+</script></body></html>
